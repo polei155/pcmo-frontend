@@ -1,0 +1,18 @@
+<div class="header bg-primary text-white md:px-4 py-2 px-2 flex justify-between">
+  <div class="md:hidden"></div>
+  <span class="text-xl">
+    <strong>
+        PCMO
+    </strong>
+  </span>
+  <div>
+    <span nz-dropdown [nzDropdownMenu]="menu" nzTrigger="click" 
+    (nzVisibleChange)="dropDownEvent($event)" nz-icon nzType="setting" nzTheme="outline" class="text-lg"></span>
+  </div>
+</div>
+<nz-dropdown-menu #menu="nzDropdownMenu">
+  <ul nz-menu>
+    <li nz-menu-item >Dashboard</li>
+    <li nz-menu-item (click)="logout()">Logout</li>
+  </ul>
+</nz-dropdown-menu>
